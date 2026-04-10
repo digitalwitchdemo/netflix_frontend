@@ -24,6 +24,9 @@ jobs:
         role-session-name: GitHubActionsSession
         aws-region: ${{ secrets.AWS_REGION }}
 
+        
+    - name: Print AWS credentials (for debugging)
+      run: aws sts get-caller-identity
 # Login to ECR
 #=============
     - name: Login to ECR
